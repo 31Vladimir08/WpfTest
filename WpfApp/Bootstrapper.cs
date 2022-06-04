@@ -5,9 +5,9 @@ using AutoMapper;
 
 namespace WpfApp
 {
-    internal class Bootstrapper
+    internal static class Bootstrapper
     {
-        internal Bootstrapper()
+        internal static void StartUp()
         {
             CreateContainer();
             CreateMapper();
@@ -16,7 +16,7 @@ namespace WpfApp
         public static IContainer Container { get; private set; }
         public static IMapper Mapper { get; private set; }
 
-        private void CreateMapper()
+        private static void CreateMapper()
         {
             var mapConfig = new MapperConfiguration(
                 x =>
@@ -27,7 +27,7 @@ namespace WpfApp
             Mapper = mapConfig.CreateMapper();
         }
 
-        private void CreateContainer()
+        private static void CreateContainer()
         {
             var builder = new ContainerBuilder();
             builder.RegisterModule(new IoC.ServiceRegistration());

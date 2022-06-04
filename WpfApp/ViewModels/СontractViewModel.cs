@@ -21,7 +21,6 @@ namespace WpfApp.ViewModels
 
         public СontractViewModel()
         {
-            //throw new System.Exception("Test2");
             _сontractService = Bootstrapper.Container.Resolve<IСontractService>();
             _mapper = Bootstrapper.Mapper;
             Contracts = new NotifyTaskCompletion<ObservableCollection<СontractUi>>(GetContractsAsync());

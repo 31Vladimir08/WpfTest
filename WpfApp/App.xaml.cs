@@ -20,7 +20,7 @@ namespace WpfApp
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            new Bootstrapper();
+            Bootstrapper.StartUp();
             base.OnStartup(e);
         }
 

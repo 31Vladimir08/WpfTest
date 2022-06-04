@@ -15,8 +15,6 @@ namespace WpfApp.Services.Services
             return await Task.Run(
                 () =>
                 {
-                    Thread.Sleep(5000);
-                    //throw new Exception("Test");
                     return new List<СontractDto>() 
                     {
                         new СontractDto { Id = 1, IsActual = true, Number = "1dgd", LastDate = DateTime.Today.AddDays(-60) },
