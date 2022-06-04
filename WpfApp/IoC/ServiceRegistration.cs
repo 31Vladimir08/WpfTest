@@ -1,8 +1,6 @@
 ﻿
 using Autofac;
 
-using AutoMapper;
-
 using WpfApp.Services.Interfaces;
 using WpfApp.Services.Services;
 

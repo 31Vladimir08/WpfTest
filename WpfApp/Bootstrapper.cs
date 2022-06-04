@@ -3,8 +3,6 @@ using Autofac;
 
 using AutoMapper;
 
-using WpfApp.IoC;
-
 namespace WpfApp
 {
     internal class Bootstrapper

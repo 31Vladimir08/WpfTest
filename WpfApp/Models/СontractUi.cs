@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WpfApp.Models
 {
@@ -12,6 +8,12 @@ namespace WpfApp.Models
         public string Number { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime LastDate { get; set; }
-        public bool IsActual { get; set; }
+        public bool IsActual 
+        {
+            get
+            {
+                return LastDate == DateTime.Today.AddDays(-60);
+            }
+        }
     }
 }

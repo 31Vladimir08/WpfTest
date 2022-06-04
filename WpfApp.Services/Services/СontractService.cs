@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -12,14 +10,20 @@ namespace WpfApp.Services.Services
 {
     public class СontractService : IСontractService
     {
-        public IEnumerable<СontractDto> GetСontracts()
+        public async Task<IEnumerable<СontractDto>> GetСontractsAsync()
         {
-            Thread.Sleep(10000);
-            return new List<СontractDto>() {
-            new СontractDto { Id = 1, IsActual = true, Number = "1dgd" },
-            new СontractDto { Id = 2, IsActual = false, Number = "2dgd" },
-            new СontractDto { Id = 3, IsActual = false, Number = "3dgd" },
-            };
+            return await Task.Run(
+                () =>
+                {
+                    Thread.Sleep(5000);
+                    //throw new Exception("Test");
+                    return new List<СontractDto>() 
+                    {
+                        new СontractDto { Id = 1, IsActual = true, Number = "1dgd", LastDate = DateTime.Today.AddDays(-60) },
+                        new СontractDto { Id = 2, IsActual = false, Number = "2dgd", LastDate = DateTime.Today.AddDays(-61) },
+                        new СontractDto { Id = 3, IsActual = false, Number = "3dgd", LastDate = DateTime.Today.AddDays(-59) },
+                    };
+                });
         }
     }
 }

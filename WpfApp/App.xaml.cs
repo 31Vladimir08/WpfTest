@@ -23,5 +23,11 @@ namespace WpfApp
             new Bootstrapper();
             base.OnStartup(e);
         }
+
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show("Exception: " + e.Exception.Message, "Exception", MessageBoxButton.OK, MessageBoxImage.Error);
+            e.Handled = true;
+        }
     }
 }

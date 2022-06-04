@@ -3,11 +3,11 @@
 namespace WpfApp.Views
 {
     /// <summary>
-    /// Interaction logic for ContractsView.xaml
+    /// Interaction logic for LoadingView.xaml
     /// </summary>
-    public partial class ContractsView : UserControl
+    public partial class LoadingView : UserControl
     {
-        public ContractsView()
+        public LoadingView()
         {
             InitializeComponent();
         }
