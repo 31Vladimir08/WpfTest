@@ -6,6 +6,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
+using Autofac;
+
+using WpfApp.Services.Interfaces;
+using WpfApp.Services.Services;
+
 namespace WpfApp
 {
     /// <summary>
@@ -13,5 +18,10 @@ namespace WpfApp
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            new Bootstrapper();
+            base.OnStartup(e);
+        }
     }
 }
