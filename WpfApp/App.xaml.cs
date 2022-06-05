@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
-
-using Autofac;
-
-using WpfApp.Services.Interfaces;
-using WpfApp.Services.Services;
+﻿using System.Windows;
 
 namespace WpfApp
 {

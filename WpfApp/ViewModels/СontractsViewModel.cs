@@ -6,20 +6,33 @@ using Autofac;
 
 using AutoMapper;
 
+using WpfApp.Interfaces.Services;
 using WpfApp.Models;
-using WpfApp.Services.Interfaces;
 
 namespace WpfApp.ViewModels
 {
-    public class СontractViewModel
+    public class СontractsViewModel : BaseViewModel
     {
         private readonly IСontractService _сontractService;
         private readonly IMapper _mapper;
 
-        public СontractUi SelectedContract { get; set; }
+        private СontractUi _selectedContract;
+
+        public СontractUi SelectedContract 
+        { 
+            get
+            {
+                return _selectedContract;
+            }
+            set
+            {
+                _selectedContract = value;
+                NotifyPropertyChanged();
+            }
+        }
         public NotifyTaskCompletion<ObservableCollection<СontractUi>> Contracts { get; private set; }
 
-        public СontractViewModel()
+        public СontractsViewModel()
         {
             _сontractService = Bootstrapper.Container.Resolve<IСontractService>();
             _mapper = Bootstrapper.Mapper;

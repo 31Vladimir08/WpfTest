@@ -1,8 +1,8 @@
 ﻿
 using Autofac;
 
-using WpfApp.Services.Interfaces;
-using WpfApp.Services.Services;
+using WpfApp.Interfaces.Services;
+using WpfApp.Services;
 
 namespace WpfApp.IoC
 {

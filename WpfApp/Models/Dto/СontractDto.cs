@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WpfApp.Services.Model
+namespace WpfApp.Models.Dto
 {
     public class СontractDto
     {

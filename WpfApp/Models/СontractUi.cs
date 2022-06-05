@@ -2,7 +2,7 @@
 
 namespace WpfApp.Models
 {
-    public class СontractUi
+    public class СontractUi : EntityBase
     {
         public int Id { get; set; }
         public string Number { get; set; }

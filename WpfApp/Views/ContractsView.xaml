@@ -14,7 +14,7 @@
         <converter:BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
     </UserControl.Resources>
     <UserControl.DataContext>
-        <viewModel:СontractViewModel></viewModel:СontractViewModel>
+        <viewModel:СontractsViewModel></viewModel:СontractsViewModel>
     </UserControl.DataContext>    
     <Grid>        
         <DataGrid 
@@ -26,8 +26,8 @@
             SelectedItem="{Binding Path=SelectedContract, Mode=TwoWay, NotifyOnSourceUpdated=True}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Contract number" Binding="{Binding Path=Number, Mode=OneWay, NotifyOnSourceUpdated=True}"/>
-                <DataGridTextColumn Header="Create date" Binding="{Binding Path=CreateDate, Mode=OneWay, NotifyOnSourceUpdated=True, StringFormat = dd.mm.yyyy}"/>
-                <DataGridTextColumn Header="Last modified date" Binding="{Binding Path=LastDate, Mode=OneWay, NotifyOnSourceUpdated=True, StringFormat = dd.mm.yyyy}"/>
+                <DataGridTextColumn Header="Create date" Binding="{Binding Path=CreateDate, Mode=OneWay, NotifyOnSourceUpdated=True, StringFormat = dd.MM.yyyy}"/>
+                <DataGridTextColumn Header="Last modified date" Binding="{Binding Path=LastDate, Mode=OneWay, NotifyOnSourceUpdated=True, StringFormat = dd.MM.yyyy}"/>
                 <DataGridCheckBoxColumn Header="Actual" Binding="{Binding Path=IsActual, Mode=OneWay, NotifyOnSourceUpdated=True}"/>
             </DataGrid.Columns>
         </DataGrid>

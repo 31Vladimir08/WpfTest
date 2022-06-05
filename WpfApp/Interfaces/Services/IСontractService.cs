@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-using WpfApp.Services.Model;
+using WpfApp.Models.Dto;
 
-namespace WpfApp.Services.Interfaces
+namespace WpfApp.Interfaces.Services
 {
     public interface IСontractService
     {
