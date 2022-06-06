@@ -67,7 +67,7 @@ namespace WpfApp.ViewModels
             get
             {
                 if (_refreshCommand == null)
-                    _refreshCommand = new RelayCommand(x => Refresh(), y => true);
+                    _refreshCommand = new RelayCommand(x => Refresh(), y => !Contracts.IsNotCompleted);
                 return _refreshCommand;
             }
         }
