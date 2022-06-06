@@ -30,6 +30,11 @@
                 <DataGridTextColumn Header="Last modified date" Binding="{Binding Path=LastDate, Mode=OneWay, NotifyOnSourceUpdated=True, StringFormat = dd.MM.yyyy}"/>
                 <DataGridCheckBoxColumn Header="Actual" Binding="{Binding Path=IsActual, Mode=OneWay, NotifyOnSourceUpdated=True}"/>
             </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="{Binding  RefreshCommand}" Header="Refresh" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
         </DataGrid>
 
         <local:LoadingView Visibility ="{Binding Contracts.IsNotCompleted,
